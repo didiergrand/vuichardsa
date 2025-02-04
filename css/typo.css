@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url('../fonts/Quicksand-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Quicksand-Light';
+    src: url('../fonts/Quicksand-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Quicksand-Medium';
+    src: url('../fonts/Quicksand-Medium.woff') format('woff');
+}
+
+body, p, span, a, button, input, textarea, select, option, label, legend, table, th, td, tr, tbody, thead, tfoot, caption, form, fieldset, legend{
+    font-family: "Quicksand-Regular", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    @media screen and (max-width: 768px){
+      font-size: 1rem;
+    }
+  } 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Quicksand-Regular", sans-serif;
+    font-weight: normal;
+  }
+  b, strong{
+    font-family: "Quicksand-Medium", sans-serif;
+    font-weight: normal;
+  }
+  h1, h1 a, .h1{
+    font-size: 2.5rem;
+    margin: 3rem 0 2rem 0;
+    @media screen and (max-width: 768px){
+      font-size: 2rem;
+    }
+  }
+  h2, h2 a, .h2{
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 2rem 0 1rem 0;
+    @media screen and (max-width: 768px){
+      font-size: 1.5rem;
+    }
+  }
+  h3, h3 a, .h3{
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    @media screen and (max-width: 768px){
+      font-size: 1.75rem;
+    }
+  }
+  h4, h4 a, .h4{
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin: 2rem 0 1rem 0;
+    @media screen and (max-width: 768px){
+      font-size: 1.5rem;
+    }
+  }
+  h5, h5 a, .h5{
+    font-size: 1.5rem;
+    @media screen and (max-width: 768px){
+      font-size: 1.25rem;
+    }
+  }
+  h6, h6 a, .h6{
+    font-size: 1.25rem;
+    @media screen and (max-width: 768px){
+      font-size: 1.25rem;
+    }
+  }

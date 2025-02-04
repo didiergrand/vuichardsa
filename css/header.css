@@ -8,6 +8,13 @@
 .main-navigation {
 	width: 100%;
 	background: #fff;
+	a{
+		font-family: "Quicksand-Medium";
+		color: var(--oceanside-dark);
+		&:hover{
+			color: var(--gray-dark);
+		}
+	}
 }
 .site-branding{
  .site-title,
@@ -31,6 +38,8 @@
 	.site-header {
 		display: flex;
         align-items: center;
+		max-width: 1440px;
+		margin: 0 auto;
 	}
 	
 	.site-header-container {

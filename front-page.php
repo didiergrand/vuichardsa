@@ -7,6 +7,31 @@
         <?php endif; ?>
     </section>
 
+    <!-- Section Présentation -->
+    <section class="presentation">
+            <?php
+            $presentation = new WP_Query(array(
+                'post_type' => 'post',
+                'category_name' => 'presentation',
+                'posts_per_page' => 1
+            ));
+
+            if ($presentation->have_posts()) :
+                while ($presentation->have_posts()) : $presentation->the_post();
+            ?>
+                <div class="presentation-content">
+                    <div class="presentation-text">
+                        <h2 style="text-align: center;"><?php the_title(); ?></h2>
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
+    </section>
+
     <!-- Section Actualités -->
     <?php
     $actualites = new WP_Query(array(
@@ -63,9 +88,10 @@
                                 <?php the_post_thumbnail('large'); ?>
                             </div>
                         <?php endif; ?>
-                        <h3><?php the_title(); ?></h3>
                         <div class="domaine-content">
+                        <h3><?php the_title(); ?></h3>
                             <?php the_content(); ?>
+                        <a href="<?php the_permalink(); ?>" class="read-more">Lire la suite</a>
                         </div>
                     </article>
                 <?php
