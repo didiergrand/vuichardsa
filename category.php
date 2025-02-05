@@ -21,17 +21,18 @@
                 if (have_posts()) :
                     while (have_posts()) : the_post();
                 ?>
-                    <article class="domaine-card">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <div class="image-container">
+                    <a href="<?php the_permalink(); ?>">
+                        <article class="domaine-card">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <div class="image-container">
                                 <?php the_post_thumbnail('large'); ?>
                             </div>
                         <?php endif; ?>
                         <div class="domaine-content">
                             <h3><?php the_title(); ?></h3>
-                            <a href="<?php the_permalink(); ?>" class="read-more">Lire la suite</a>
                         </div>
-                    </article>
+                        </article>
+                    </a>
                 <?php
                     endwhile;
                 endif;
