@@ -29,7 +29,6 @@
                         <?php endif; ?>
                         <div class="domaine-content">
                             <h3><?php the_title(); ?></h3>
-                            <?php the_content(); ?>
                             <a href="<?php the_permalink(); ?>" class="read-more">Lire la suite</a>
                         </div>
                     </article>
