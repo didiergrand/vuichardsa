@@ -15,6 +15,10 @@ h3 {
 
 .site-main{
     background-color: var(--gray-light);
+    padding: 4rem 0;
+}
+.home .site-main{
+    padding: 0;
 }
 
 .site-footer{
@@ -22,7 +26,10 @@ h3 {
 }
 a{
     color: var(--oceanside-dark);
-    &:hover{
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:visited{
         color: var(--gray-dark);
     }
 }
@@ -44,8 +51,7 @@ a{
     text-align: center;
 }
 
-.realisation-card a {
-    text-decoration: none;
+.realisation-card{
     color: inherit;
 }
 
@@ -79,6 +85,19 @@ a{
     border-radius: 8px;
     background-color: var(--gray-light);
     border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        h3{
+            &::after{
+                background-image: url('../images/arrow-circle-o-right.png');
+            }
+        }
+    }
 }
 .domaine-card .image-container {
     position: relative;
@@ -98,7 +117,24 @@ a{
 }
 
 .domaine-content{
-    padding: 1rem 3rem 3rem;
+    padding: 1rem 3rem;
+    h3{
+        text-decoration: none;
+        position: relative;
+        &::after{
+            content: '';
+            background-image: url('../images/arrow-circle-o-right_green.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            display: inline-block;
+            width: 1.2rem;
+            height: 1.2rem;
+            position: absolute;
+            right: 0;
+            top: 10px;
+        }
+       }
 }
 
 
