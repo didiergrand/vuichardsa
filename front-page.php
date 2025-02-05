@@ -82,8 +82,7 @@
                 if ($domaines->have_posts()) :
                     while ($domaines->have_posts()) : $domaines->the_post();
                 ?>
-                    <a href="<?php the_permalink(); ?>" class="read-more">
-                        <article class="domaine-card">
+                    <article class="domaine-card" onclick="window.location.href='<?php the_permalink(); ?>'">
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="image-container">
                                 <?php the_post_thumbnail('large'); ?>
@@ -94,7 +93,6 @@
                             <?php the_content(); ?>
                         </div>
                     </article>
-                    </a>
                 <?php
                     endwhile;
                     wp_reset_postdata();
@@ -119,7 +117,7 @@
                 if ($realisations->have_posts()) :
                     while ($realisations->have_posts()) : $realisations->the_post();
                 ?>
-                        <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>">
                     <article class="realisation-card">
                             <div class="realisation-image">
                                 <?php if (has_post_thumbnail()) : ?>
