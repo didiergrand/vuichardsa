@@ -119,16 +119,16 @@
                 if ($realisations->have_posts()) :
                     while ($realisations->have_posts()) : $realisations->the_post();
                 ?>
-                    <article class="realisation-card">
                         <a href="<?php the_permalink(); ?>">
+                    <article class="realisation-card">
                             <div class="realisation-image">
                                 <?php if (has_post_thumbnail()) : ?>
                                     <?php the_post_thumbnail('medium'); ?>
                                 <?php endif; ?>
                             </div>
                             <h3><?php the_title(); ?></h3>
-                        </a>
                     </article>
+                    </a>
                 <?php
                     endwhile;
                     wp_reset_postdata();

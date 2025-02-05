@@ -14,19 +14,19 @@
                 if ($domaines->have_posts()) :
                     while ($domaines->have_posts()) : $domaines->the_post();
                 ?>  
+                <a href="<?php the_permalink(); ?>">
                     <article class="domaine-card">  
-                        <a href="<?php the_permalink(); ?>" class="read-more">
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="image-container">
                                 <?php the_post_thumbnail('large'); ?>
                             </div>
                         <?php endif; ?>
                         <div class="domaine-content">
-                        <h3><?php the_title(); ?></h3>
+                            <h3><?php the_title(); ?></h3>
                             <?php the_content(); ?>
-                            </div>
-                            </a>
+                        </div>
                         </article>
+                    </a>
                 <?php
                     endwhile;
                     wp_reset_postdata();
