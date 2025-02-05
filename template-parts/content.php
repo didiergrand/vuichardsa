@@ -19,7 +19,7 @@
 		endif;
 		?>
 	</header><!-- .entry-header -->
-
+		<div class="post-contemt">
 	<?php menuiserie_charpente_semsales_post_thumbnail(); ?>
 
 	<div class="entry-content">
@@ -46,9 +46,6 @@
 			)
 		);
 		?>
+		</div>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php menuiserie_charpente_semsales_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

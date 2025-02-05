@@ -13,8 +13,9 @@
 
                 if ($domaines->have_posts()) :
                     while ($domaines->have_posts()) : $domaines->the_post();
-                ?>
-                    <article class="domaine-card">
+                ?>  
+                    <article class="domaine-card">  
+                        <a href="<?php the_permalink(); ?>" class="read-more">
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="image-container">
                                 <?php the_post_thumbnail('large'); ?>
@@ -23,9 +24,9 @@
                         <div class="domaine-content">
                         <h3><?php the_title(); ?></h3>
                             <?php the_content(); ?>
-                        <a href="<?php the_permalink(); ?>" class="read-more">Lire la suite</a>
-                        </div>
-                    </article>
+                            </div>
+                            </a>
+                        </article>
                 <?php
                     endwhile;
                     wp_reset_postdata();
