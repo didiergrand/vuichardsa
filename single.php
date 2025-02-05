@@ -18,21 +18,47 @@ get_header();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'menuiserie-charpente-semsales' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'menuiserie-charpente-semsales' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
 		endwhile; // End of the loop.
 		?>
 		</div>
+
+		<?php
+		// Vérifier si le post actuel est dans la catégorie 'menuiserie'
+		if (has_category('domaine')) :
+			// Récupérer les autres posts de la même catégorie, en excluant le post actuel
+			$related_posts = new WP_Query(array(
+				'post_type' => 'post',
+				'category_name' => get_post_field('post_name', get_the_ID()),
+				'posts_per_page' => 6,
+				'post__not_in' => array(get_the_ID()) // Exclure le post actuel
+			));
+
+			if ($related_posts->have_posts()) : ?>
+				<section class="realisations background-gray">
+					<div class="container">
+						<h2>Réalisations en <?php echo get_post_field('post_name', get_the_ID()); ?></h2>
+						<div class="realisations-grid">
+							<?php while ($related_posts->have_posts()) : $related_posts->the_post(); ?>
+								<article class="domaine-card">
+									<?php if (has_post_thumbnail()) : ?>
+										<div class="image-container">
+											<?php the_post_thumbnail('large'); ?>
+										</div>
+									<?php endif; ?>
+									<div class="domaine-content">
+										<h3><?php the_title(); ?></h3>
+										<a href="<?php the_permalink(); ?>" class="read-more">Lire la suite</a>
+									</div>
+								</article>
+							<?php endwhile; ?>
+						</div>
+					</div>
+				</section>
+				<?php
+				wp_reset_postdata();
+			endif;
+		endif;
+		?>
 	</main><!-- #main -->
 
 <?php
