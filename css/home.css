@@ -55,37 +55,6 @@
 .actualite-content {
     flex: 0 0 75%;
 }
-/* Section Réalisations */
-.realisations {
-    padding: 4rem 0;
-}
-
-.realisations-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-}
-
-.realisation-card {
-    text-align: center;
-}
-
-.realisation-card a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.realisation-image {
-    aspect-ratio: 1;
-    overflow: hidden;
-    margin-bottom: 1rem;
-}
-
-.realisation-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 /* Responsive */
 @media (max-width: 992px) {
