@@ -141,7 +141,7 @@ a{
 .background-gray{
     background-color: var(--gray-light-2);
 }
-.post-contemt{
+.category-domaine .post-contemt{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
