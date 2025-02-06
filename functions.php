@@ -99,6 +99,20 @@ function menuiserie_charpente_semsales_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	add_theme_support(
+		'custom-header',
+		apply_filters(
+			'menuiserie_charpente_semsales_custom_header_args',
+			array(
+				'width'              => 1920,
+				'height'            => 1080,
+				'flex-height'       => true,
+				'flex-width'        => true,
+				'default-image'     => '',
+			)
+		)
+	);
 }
 add_action( 'after_setup_theme', 'menuiserie_charpente_semsales_setup' );
 
