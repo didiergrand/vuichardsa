@@ -23,8 +23,6 @@
             <img 
                 src="<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'desktop-header')[0]); ?>"
                 alt=""
-                loading="lazy"
-                class="header-background"
             >
         </picture>
         <?php endif; ?>
