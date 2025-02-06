@@ -106,10 +106,10 @@ function menuiserie_charpente_semsales_setup() {
 			'menuiserie_charpente_semsales_custom_header_args',
 			array(
 				'width'              => 1920,
-				'height'            => 1080,
-				'flex-height'       => true,
-				'flex-width'        => true,
-				'default-image'     => '',
+				'height'             => 1080,
+				'flex-height'        => true,
+				'flex-width'         => true,
+				'default-image'      => '',
 			)
 		)
 	);
