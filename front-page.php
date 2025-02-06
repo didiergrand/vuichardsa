@@ -19,9 +19,9 @@
                 srcset="<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'tablet-header')[0]); ?>"
                 type="image/webp"
             >
-            <!-- Version desktop (fallback) -->
+            <!-- Version desktop header (fallback) -->
             <img 
-                src="<?php echo esc_url(get_header_image()); ?>"
+                src="<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'desktop-header')[0]); ?>"
                 alt=""
                 loading="lazy"
                 class="header-background"
