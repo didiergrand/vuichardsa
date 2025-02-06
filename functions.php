@@ -176,3 +176,36 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function register_footer_widget_areas() {
+	register_sidebar(array(
+		'name'          => esc_html__('Footer Widget 1', 'menuiserie-charpente-semsales'),
+		'id'            => 'footer-1',
+		'description'   => esc_html__('Add widgets here.', 'menuiserie-charpente-semsales'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
+
+	register_sidebar(array(
+		'name'          => esc_html__('Footer Widget 2', 'menuiserie-charpente-semsales'),
+		'id'            => 'footer-2',
+		'description'   => esc_html__('Add widgets here.', 'menuiserie-charpente-semsales'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
+
+	register_sidebar(array(
+		'name'          => esc_html__('Footer Widget 3', 'menuiserie-charpente-semsales'),
+		'id'            => 'footer-3',
+		'description'   => esc_html__('Add widgets here.', 'menuiserie-charpente-semsales'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
+}
+add_action('widgets_init', 'register_footer_widget_areas');
+

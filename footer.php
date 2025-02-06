@@ -12,19 +12,33 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<div class="footer-widgets-container">
+			<div class="container">
+				<div class="footer-widgets-row">
+					<div class="footer-widget-col">
+						<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+							<?php dynamic_sidebar( 'footer-1' ); ?>
+						<?php endif; ?>
+					</div>
+					<div class="footer-widget-col">
+						<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
+							<?php dynamic_sidebar( 'footer-2' ); ?>
+						<?php endif; ?>
+					</div>
+					<div class="footer-widget-col">
+						<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
+							<?php dynamic_sidebar( 'footer-3' ); ?>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'menuiserie-charpente-semsales' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'menuiserie-charpente-semsales' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'menuiserie-charpente-semsales' ), 'menuiserie-charpente-semsales', '<a href="http://digitalgarage.ch">Didier Grand</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="container">
+		<div>Vuichard J. SA - Menuiserie Charpente Semsales | </div><div><img src="<?php echo get_template_directory_uri(); ?>/images/digitalgarage.svg" alt="Digitalgarage - Création web & stratégie digitale" width="16"> webdesign & code : Didier Grand - <a href="https://digitalgarage.ch?ref=vuichard-j-sa" target="_blank" title="Digitalgarage - Création web & stratégie digitale">digitalgarage.ch</a>
+		</div></div>
+		</div>
+	</footer><!-- #colophon -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
