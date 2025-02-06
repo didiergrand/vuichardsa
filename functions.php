@@ -209,3 +209,10 @@ function register_footer_widget_areas() {
 }
 add_action('widgets_init', 'register_footer_widget_areas');
 
+function add_custom_image_sizes() {
+    add_image_size('mobile-header', 576, 300, true);      // Pour mobile standard
+    add_image_size('mobile-header-2x', 1152, 600, true);  // Pour mobile haute densité
+    add_image_size('tablet-header', 768, 400, true);      // Pour tablette standard
+    add_image_size('tablet-header-2x', 1536, 800, true);  // Pour tablette haute densité
+}
+add_action('after_setup_theme', 'add_custom_image_sizes');

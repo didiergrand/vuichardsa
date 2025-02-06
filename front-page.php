@@ -3,7 +3,30 @@
     <!-- Hero Banner Section -->
     <section class="hero-banner">
         <?php if (get_header_image()) : ?>
-            <img src="<?php echo esc_url(get_header_image()); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
+
+
+
+        <picture>
+            <!-- Version mobile -->
+            <source
+                media="(max-width: 576px)"
+                srcset="<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'mobile-header')[0]); ?>"
+                type="image/webp"
+            >
+            <!-- Version tablette -->
+            <source
+                media="(max-width: 768px)"
+                srcset="<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'tablet-header')[0]); ?>"
+                type="image/webp"
+            >
+            <!-- Version desktop (fallback) -->
+            <img 
+                src="<?php echo esc_url(get_header_image()); ?>"
+                alt=""
+                loading="lazy"
+                class="header-background"
+            >
+        </picture>
         <?php endif; ?>
     </section>
 
