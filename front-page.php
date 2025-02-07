@@ -91,7 +91,7 @@
     <!-- Section Domaines -->
     <section class="domaines">
         <div class="container">
-            <h2>Nos domaines d'activités</h2>
+            <center><h2>Nos domaines d'activités</h2></center>
             <div class="domaines-grid">
                 <?php
                 $domaines = new WP_Query(array(
@@ -126,7 +126,7 @@
     <!-- Section Réalisations -->
     <section class="realisations">
         <div class="container">
-            <h2>Nos Réalisations</h2>
+            <center><h2>Nos Réalisations</h2></center>
             <div class="realisations-grid">
                 <?php
                 $realisations = new WP_Query(array(
