@@ -2,7 +2,7 @@
     <!-- Section Domaines -->
     <section class="domaines background-gray">
         <div class="container">
-            <h2>Nos domaines d'activités</h2>
+            <h1>Nos domaines d'activités</h1>
             <div class="domaines-grid">
                 <?php
                 $domaines = new WP_Query(array(

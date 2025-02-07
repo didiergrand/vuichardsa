@@ -15,7 +15,7 @@
             
             $title = isset($titles[$category->slug]) ? $titles[$category->slug] : 'Nos ' . $category->name;
             ?>
-            <h2><?php echo $title; ?></h2>
+            <h1><?php echo $title; ?></h1>
             <div class="realisations-grid">
                 <?php
                 if (have_posts()) :
